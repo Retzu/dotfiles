@@ -7,6 +7,13 @@ else
     exit 1
 fi
 
+git submodule init
+git submodule update
+
 ln -s "$PWD/.ackrc" $HOME/.ackrc
 ln -s "$PWD/.vim/" $HOME/.vim
 ln -s "$PWD/.vim/.vimrc" $HOME/.vimrc
+
+cd $HOME/.vim
+git submodule init
+git submodule update
