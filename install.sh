@@ -11,6 +11,7 @@ git submodule init
 git submodule update
 
 ln -s "$PWD/.ackrc" $HOME/.ackrc
+ln -s "$PWD/.zshrc" $HOME/.zshrc
 ln -s "$PWD/.vim/" $HOME/.vim
 ln -s "$PWD/.vim/.vimrc" $HOME/.vimrc
 
