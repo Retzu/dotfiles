@@ -90,3 +90,4 @@ alias myip='curl -s icanhazip.com'
 
 # Remove timeout in between switching vi modes
 export KEYTIMEOUT=1
+
