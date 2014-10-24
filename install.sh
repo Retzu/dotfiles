@@ -10,10 +10,17 @@ fi
 git submodule init
 git submodule update
 
+rm $HOME/.ackrc
 ln -s "$PWD/.ackrc" $HOME/.ackrc
+
+rm $HOME/.zshrc
 ln -s "$PWD/.zshrc" $HOME/.zshrc
-ln -s "$PWD/.vim/" $HOME/.vim
-ln -s "$PWD/.vim/.vimrc" $HOME/.vimrc
+
+rm -rf $HOME/.vim
+ln -s "$PWD/vimfiles/" $HOME/.vim
+
+rm $HOME/.vimrc
+ln -s "$PWD/vimfiles/.vimrc" $HOME/.vimrc
 
 cd $HOME/.vim
 git submodule init
