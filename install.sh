@@ -22,7 +22,9 @@ ln -s "$PWD/vimfiles/" $HOME/.vim
 rm $HOME/.vimrc
 ln -s "$PWD/vimfiles/.vimrc" $HOME/.vimrc
 
-git clone https://github.com/robbyrussell/oh-my-zsh $HOME/.oh-my-zsh
+if [[ ! -d $HOME/.oh-my-zsh  ]]; then
+    git clone https://github.com/robbyrussell/oh-my-zsh $HOME/.oh-my-zsh
+fi
 
 cd $HOME/.vim
 git submodule init
