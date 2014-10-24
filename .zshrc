@@ -48,7 +48,7 @@ ZSH_THEME="garyblessington"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git debian colored-man rsync git-extras vi-mode django symfony2)
+plugins=(git debian colored-man rsync git-extras vi-mode django symfony2 virtualenv)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -90,3 +90,4 @@ alias myip='curl -s icanhazip.com'
 
 # Remove timeout in between switching vi modes
 export KEYTIMEOUT=1
+
