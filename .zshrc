@@ -91,3 +91,5 @@ alias myip='curl -s icanhazip.com'
 # Remove timeout in between switching vi modes
 export KEYTIMEOUT=1
 
+# Disable prompting for updates, always do them
+DISABLE_UPDATE_PROMPT=true
