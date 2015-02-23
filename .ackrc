@@ -1,6 +1,7 @@
 --type-add=js=.js.twig,.coffee
 --type-add=html=.html.twig
 --type-add=css=.css.twig,.sass,.scss,.less
+--type-add=twig=.twig
 --color
 --ignore-dir=.idea
 --smart-case
