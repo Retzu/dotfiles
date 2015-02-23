@@ -16,6 +16,9 @@ ln -s "$PWD/.ackrc" $HOME/.ackrc
 rm $HOME/.zshrc
 ln -s "$PWD/.zshrc" $HOME/.zshrc
 
+rm $HOME/.Xresouces
+ln -s "$PWD/.Xresouces" $HOME/.Xresouces
+
 rm -rf $HOME/.vim
 ln -s "$PWD/vimfiles/" $HOME/.vim
 
