@@ -48,7 +48,7 @@ ZSH_THEME="garyblessington"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git debian colored-man rsync git-extras django symfony2)
+plugins=(git debian colored-man rsync django symfony2)
 
 source $ZSH/oh-my-zsh.sh
 
