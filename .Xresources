@@ -76,7 +76,7 @@ URxvt*iconName: terminal
 !URxvt*font: xft:Source\ Code\ Pro\ for\ Powerline\ Medium:size=9:antialias=true
 URxvt*font: xft:Source Code Pro for Powerline:size=9:antialias=true,\
             xft:DejaVu Sans Mono:size=9
-URxvt*letterSpace: -1
+URxvt*letterSpace: -2
 
 ! URxvt*boldFont: fontlist
 
