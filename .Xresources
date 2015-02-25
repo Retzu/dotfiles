@@ -5,7 +5,7 @@ URxvt*depth: 32
 ! URxvt*buffered: boolean
 
 ! Create the window with the specified X window geometry [default 80x24]; option -geometry.
-URxvt*geometry: 142x40
+URxvt*geometry: 124x40
 
 ! Use the specified colour as the windows background colour [default White]; option -bg.
 !URxvt*background: rgba:1111/1111/1111/dddd
