@@ -5,13 +5,15 @@ URxvt*depth: 32
 ! URxvt*buffered: boolean
 
 ! Create the window with the specified X window geometry [default 80x24]; option -geometry.
-! URxvt*geometry: geom
+URxvt*geometry: 142x40
 
 ! Use the specified colour as the windows background colour [default White]; option -bg.
-URxvt*background: rgba:1111/1111/1111/dddd
+!URxvt*background: rgba:1111/1111/1111/dddd
+URxvt*background: #002b36
 
 ! Use the specified colour as the windows foreground colour [default Black]; option -fg.
-URxvt*foreground: white
+!URxvt*foreground: white
+URxvt*foreground: #657b83
 
 ! Use the specified colour for the colour value n, where 0-7 corresponds to low-intensity (normal) colours and 8-15 corresponds
 ! URxvt*colorn: colour
@@ -57,6 +59,8 @@ URxvt*foreground: white
 
 ! Set the application icon pixmap; option -icon.
 ! URxvt*iconFile: file
+URxvt*iconFile: terminal
+URxvt*iconName: terminal
 
 ! Use the specified colour for the scrollbar [default #B2B2B2].
 ! URxvt*scrollColor: colour
@@ -69,7 +73,10 @@ URxvt*foreground: white
 
 ! Select the fonts to be used. This is a comma separated list of font names that are checked in order when trying to find glyphs
 ! URxvt*font: fontlist
-URxvt*font: xft:source code pro for powerline:size=9:antialias=true
+!URxvt*font: xft:Source\ Code\ Pro\ for\ Powerline\ Medium:size=9:antialias=true
+URxvt*font: xft:Source Code Pro for Powerline:size=9:antialias=true,\
+            xft:DejaVu Sans Mono:size=9
+URxvt*letterSpace: -1
 
 ! URxvt*boldFont: fontlist
 
@@ -288,26 +295,26 @@ URxvt*letterSpaceing: 0
 
 ! Dark
 
-! #define S_base03        #002b36
-! #define S_base02        #073642
-! #define S_base01        #586e75
-! #define S_base00        #657b83
-! #define S_base0         #839496
-! #define S_base1         #93a1a1
-! #define S_base2         #eee8d5
-! #define S_base3         #fdf6e3
+#define S_base03        #002b36
+#define S_base02        #073642
+#define S_base01        #586e75
+#define S_base00        #657b83
+#define S_base0         #839496
+#define S_base1         #93a1a1
+#define S_base2         #eee8d5
+#define S_base3         #fdf6e3
 
 
 ! Light
 
-#define S_base03 #fdf6e3
-#define S_base02 #eee8d5
-#define S_base01 #93a1a1
-#define S_base00 #839496
-#define S_base0 #657b83
-#define S_base1 #586e75
-#define S_base2 #073642
-#define S_base3 #002b36
+! #define S_base03 #fdf6e3
+! #define S_base02 #eee8d5
+! #define S_base01 #93a1a1
+! #define S_base00 #839496
+! #define S_base0 #657b83
+! #define S_base1 #586e75
+! #define S_base2 #073642
+! #define S_base3 #002b36
 
 
 ! To only apply colors to your terminal, for example, prefix
