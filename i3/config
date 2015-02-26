@@ -241,7 +241,7 @@ bar {
 
 exec --no-startup-id compton --config ~/.i3/compton.conf -b
 exec --no-startup-id setxkbmap de
+exec --no-startup-id xrdb ~/.Xresources
 exec --no-startup-id nm-applet &
-
 
 exec_always --no-startup-id feh --bg-center /usr/share/backgrounds/gnome/Whispy_Tails.jpg
