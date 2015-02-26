@@ -1,5 +1,5 @@
 ! Compile xft: Attempt to find a visual with the given bit depth; option -depth.
-URxvt*depth: 32
+URxvt*depth: 8
 
 ! Compile xft: Turn on/off double-buffering for xft (default enabled).  On some card/driver combination enabling it slightly
 ! URxvt*buffered: boolean
@@ -59,8 +59,6 @@ URxvt*foreground: #657b83
 
 ! Set the application icon pixmap; option -icon.
 ! URxvt*iconFile: file
-URxvt*iconFile: terminal
-URxvt*iconName: terminal
 
 ! Use the specified colour for the scrollbar [default #B2B2B2].
 ! URxvt*scrollColor: colour
