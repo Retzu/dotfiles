@@ -10,25 +10,38 @@ fi
 git submodule init
 git submodule update
 
-rm $HOME/.ackrc
-ln -s "$PWD/.ackrc" $HOME/.ackrc
+# Ack ############################
+rm ${HOME}/.ackrc
+ln -s "${PWD}/.ackrc" "${HOME}/.ackrc"
+##################################
 
-rm $HOME/.zshrc
-ln -s "$PWD/.zshrc" $HOME/.zshrc
+# ZSH ############################
+rm ${HOME}/.zshrc
+ln -s "${PWD}/.zshrc" "${HOME}/.zshrc"
 
-rm $HOME/.Xresouces
-ln -s "$PWD/.Xresouces" $HOME/.Xresouces
-
-rm -rf $HOME/.vim
-ln -s "$PWD/vimfiles/" $HOME/.vim
-
-rm $HOME/.vimrc
-ln -s "$PWD/vimfiles/.vimrc" $HOME/.vimrc
-
-if [[ ! -d $HOME/.oh-my-zsh  ]]; then
-    git clone https://github.com/robbyrussell/oh-my-zsh $HOME/.oh-my-zsh
+if [[ ! -d ${HOME}/.oh-my-zsh  ]]; then
+    git clone https://github.com/robbyrussell/oh-my-zsh ${HOME}/.oh-my-zsh
 fi
+##################################
 
-cd $HOME/.vim
+# .Xresources ####################
+rm ${HOME}/.Xresouces
+ln -s "${PWD}/.Xresources" "${HOME}/.Xresources"
+##################################
+
+# Vim ############################
+rm -rf ${HOME}/.vim
+ln -s "${PWD}/vimfiles/" "${HOME}/.vim"
+
+rm ${HOME}/.vimrc
+ln -s "${PWD}/vimfiles/.vimrc" "${HOME}/.vimrc"
+
+cd ${HOME}/.vim
 git submodule init
 git submodule update
+##################################
+
+# Ranger #########################
+mkdir -p "${HOME}/.config/"
+ln -s "${PWD}/ranger" "${HOME}/.config/ranger"
+##################################
