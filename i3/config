@@ -97,8 +97,8 @@ bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+Control+Shift+Left move window to workspace prev
 bindsym $mod+Control+Shift+Right move window to workspace next
 
-bindsym $mod+Control+Shift+Prior move container to output left
-bindsym $mod+Control+Shift+Next move container to output right
+bindsym $mod+Control+Shift+Prior move workspace to output left
+bindsym $mod+Control+Shift+Next move workspace to output right
 
 bindsym $mod+Shift+1 move container to workspace number $ws1
 bindsym $mod+Shift+2 move container to workspace number $ws2
