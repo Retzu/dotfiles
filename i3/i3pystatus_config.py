@@ -28,17 +28,13 @@ status = Status(standalone=True)
 status.register("clock",
     format="%a %-d %b %X",)
 
-
-status.register("network",
-    interface="eth0",
-    color_up=white,
-    color_down=red,
-    format_up="{v4cidr}",
-    format_down="")
-
 status.register("pulseaudio",
-    format="VOL {volume}%",
+    format=" {volume}%",
     color_muted=red,
     color_unmuted=white,)
+
+status.register("weather",
+    location_code="AUXX0561:1:AU",
+    format=" {current_temp}",)
 
 status.run()
