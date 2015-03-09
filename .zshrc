@@ -90,3 +90,6 @@ alias myip='curl -s icanhazip.com'
 
 # Disable prompting for updates, always do them
 DISABLE_UPDATE_PROMPT=true
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
