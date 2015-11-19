@@ -7,12 +7,6 @@ fi
 
 PWD=$(pwd)
 
-git submodule init
-git submodule update
-
-git submodule foreach --recursive git submodule init
-git submodule foreach --recursive git submodule update
-
 # Ack ############################
 rm ${HOME}/.ackrc
 ln -s "${PWD}/.ackrc" "${HOME}/.ackrc"
@@ -27,27 +21,7 @@ if [[ ! -d "${HOME}/.oh-my-zsh"  ]]; then
 fi
 ##################################
 
-# .Xresources ####################
-rm ${HOME}/.Xresources
-ln -s "${PWD}/.Xresources" "${HOME}/.Xresources"
-##################################
-
 # Vim ############################
-rm -rf ${HOME}/.vim
-ln -s "${PWD}/vimfiles/" "${HOME}/.vim"
-
 rm ${HOME}/.vimrc
-ln -s "${PWD}/vimfiles/.vimrc" "${HOME}/.vimrc"
-##################################
-
-# Ranger #########################
-mkdir -p "${HOME}/.config/"
-rm -rf "${HOME}/.config/ranger"
-ln -s "${PWD}/ranger" "${HOME}/.config/ranger"
-##################################
-
-# i3wm ###########################
-cd ${PWD}
-rm -rf "${HOME}/.i3"
-ln -s "${PWD}/i3" "${HOME}/.i3"
+ln -s "${PWD}/.vimrc" "${HOME}/.vimrc"
 ##################################

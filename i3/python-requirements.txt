@@ -1,4 +1,0 @@
-i3pystatus
-colour
-netifaces
-python-weather-api
