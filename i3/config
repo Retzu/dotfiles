@@ -92,8 +92,8 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-set $workspace1 "1:"
-set $workspace2 "2:"
+set $workspace2 "1:"
+set $workspace1 "2:"
 set $workspace3 "3:"
 set $workspace4 "4:"
 set $workspace5 "5:"
@@ -238,3 +238,6 @@ exec_always --no-startup-id setxkbmap de
 # Move workspaces to displays
 bindsym $mod+Prior move workspace to output left
 bindsym $mod+Next move workspace to output right
+
+# Apps on specific workspaces
+assign [class="google-chrome"] $workspace2
