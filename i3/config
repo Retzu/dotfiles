@@ -163,61 +163,59 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-	output DP-2
-        tray_output DP-2
-	status_command i3blocks -c $HOME/.config/i3/i3blocks.conf
-	strip_workspace_numbers yes
-	position top
+    status_command i3blocks -c $HOME/.config/i3/i3blocks.conf
+    strip_workspace_numbers yes
+    position top
 
-	set $background1 #002b36
-	set $background2 #073742
+    set $background1 #002b36
+    set $background2 #073742
 
-	set $content1 #586e75
-	set $content2 #657b83
-	set $content3 #839496
-	set $content4 #93a1a1
+    set $content1 #586e75
+    set $content2 #657b83
+    set $content3 #839496
+    set $content4 #93a1a1
 
-	set $white1 #eee8d5
-	set $white2 #fdf6e3
+    set $white1 #eee8d5
+    set $white2 #fdf6e3
 
-	colors {
-		background $background1
-		statusline $content1
+    colors {
+        background $background1
+        statusline $content1
 
-		#                     border         background    text
-		focused_workspace     $background1   $background1  $content4
-		active_workspace      $background1   $background1  $content1
-		inactive_workspace    $background1   $background1  $content1
-		urgent_workspace      $background1   $background1  $white1
-	}
+        #                     border         background    text
+        focused_workspace     $background1   $background1  $content4
+        active_workspace      $background1   $background1  $content1
+        inactive_workspace    $background1   $background1  $content1
+        urgent_workspace      $background1   $background1  $white1
+    }
 }
 
 bar {
-	output DVI-I-0
-	strip_workspace_numbers yes
-	position top
+    output DVI-I-0
+    strip_workspace_numbers yes
+    position top
 
-	set $background1 #002b36
-	set $background2 #073742
+    set $background1 #002b36
+    set $background2 #073742
 
-	set $content1 #586e75
-	set $content2 #657b83
-	set $content3 #839496
-	set $content4 #93a1a1
+    set $content1 #586e75
+    set $content2 #657b83
+    set $content3 #839496
+    set $content4 #93a1a1
 
-	set $white1 #eee8d5
-	set $white2 #fdf6e3
+    set $white1 #eee8d5
+    set $white2 #fdf6e3
 
-	colors {
-		background $background1
-		statusline $content1
+    colors {
+        background $background1
+        statusline $content1
 
-		#                     border         background    text
-		focused_workspace     $background1   $background1  $content4
-		active_workspace      $background1   $background1  $content1
-		inactive_workspace    $background1   $background1  $content1
-		urgent_workspace      $background1   $background1  $white1
-	}
+        #                     border         background    text
+        focused_workspace     $background1   $background1  $content4
+        active_workspace      $background1   $background1  $content1
+        inactive_workspace    $background1   $background1  $content1
+        urgent_workspace      $background1   $background1  $white1
+    }
 }
 
 # Gaps
@@ -233,11 +231,10 @@ new_float none
 hide_edge_borders both
 
 exec --no-startup-id compton
-exec_always feh --bg-center $HOME/.config/i3/wallpaper
+exec --no-startup-id VBoxClient-all
+exec_always --no-startup-id feh --bg-center $HOME/.config/i3/wallpaper
+exec_always --no-startup-id setxkbmap de
 
 # Move workspaces to displays
 bindsym $mod+Prior move workspace to output left
 bindsym $mod+Next move workspace to output right
-
-# Screen layout
-exec --no-startup-id $HOME/.screenlayout/layout.sh
