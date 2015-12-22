@@ -8,12 +8,12 @@ fi
 PWD=$(pwd)
 
 # Ack ############################
-rm ${HOME}/.ackrc
+rm -f ${HOME}/.ackrc
 ln -s "${PWD}/.ackrc" "${HOME}/.ackrc"
 ##################################
 
 # ZSH ############################
-rm ${HOME}/.zshrc
+rm -f ${HOME}/.zshrc
 ln -s "${PWD}/.zshrc" "${HOME}/.zshrc"
 
 if [[ ! -d "${HOME}/.oh-my-zsh"  ]]; then
@@ -21,7 +21,7 @@ if [[ ! -d "${HOME}/.oh-my-zsh"  ]]; then
 fi
 ##################################
 
-# Vim ############################
-rm ${HOME}/.vimrc
-ln -s "${PWD}/.vimrc" "${HOME}/.vimrc"
+# Nvim ############################
+rm -rf ${HOME}/.config/nvim
+ln -s "${PWD}/nvim" "${HOME}/.config/nvim"
 ##################################
