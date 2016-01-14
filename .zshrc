@@ -86,3 +86,6 @@ source $ZSH/oh-my-zsh.sh
 DISABLE_UPDATE_PROMPT=true
 
 alias serve="python3 -m http.server"
+alias vi="nvim"
+alias vim="nvim"
+
