@@ -25,6 +25,11 @@ set relativenumber  " Show line numbers relative to current line number for quic
 set nofoldenable  " Don't automatically fold everything when opening a file
 " }}}
 
+" Set automatic case sensitive search
+" /test - case insensitive
+" /Test - case sensitive
+set smartcase
+
 " Leader stuff ------------------------------------ {{{
 let mapleader = ","
 
