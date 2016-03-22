@@ -33,5 +33,6 @@ set smartcase
 " Leader stuff ------------------------------------ {{{
 let mapleader = ","
 
-map ,<space> :nohlsearch<CR>  " ,<space> = remove hilights from last search
+map <leader><space> :nohlsearch<CR>  " <leader><space> = remove hilights from last search
+map <leader>w :set wrap!<CR>  " <leader>w = toggle line wrapping
 " }}}
