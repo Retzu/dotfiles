@@ -45,5 +45,11 @@ inoremap jk <Esc>
 " Plugins ----------------------------------------- {{{
 call plug#begin('~/.config/nvim/plugged/')
 Plug 'mattn/emmet-vim', { 'for': 'html' }
+Plug 'nvie/vim-flake8', { 'for': 'python' }
 call plug#end()
+" }}}
+
+" Plugins options --------------------------------- {{{
+" Call the flake8 plugin on each write of a python file
+autocmd BufWritePost *.py call Flake8()
 " }}}
