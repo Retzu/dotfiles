@@ -89,7 +89,7 @@ alias serve="python3 -m http.server"
 alias vi="nvim"
 alias vim="nvim"
 alias busy="hexdump -C < /dev/urandom | grep 'ca fe' "
-alias todo="/usr/bin/nvim ${HOME}/Dropbox/Arbeit/todo.txt"
+alias todo="/usr/bin/nvim -O ${HOME}/Dropbox/Arbeit/todo.txt ${HOME}/Dropbox/Arbeit/done.txt"
 
 eval $(thefuck --alias)
 
