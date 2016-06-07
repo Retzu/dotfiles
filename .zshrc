@@ -88,4 +88,9 @@ DISABLE_UPDATE_PROMPT=true
 alias serve="python3 -m http.server"
 alias vi="nvim"
 alias vim="nvim"
+alias busy="hexdump -C < /dev/urandom | grep 'ca fe' "
+alias todo="/usr/bin/nvim ${HOME}/Dropbox/Arbeit/todo.txt"
 
+eval $(thefuck --alias)
+
+export WINEARCH=win32
