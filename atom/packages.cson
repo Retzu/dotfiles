@@ -1,0 +1,13 @@
+packages: [
+  "activate-power-mode"
+  "atom-material-syntax"
+  "atom-material-ui"
+  "autocomplete-python"
+  "emmet"
+  "file-icons"
+  "linter"
+  "linter-flake8"
+  "package-sync"
+  "pretty-json"
+  "react"
+]
