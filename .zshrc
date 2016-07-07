@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/chris/.oh-my-zsh
+export ZSH=/home/chris/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -93,4 +93,3 @@ alias todo="/usr/bin/nvim -O ${HOME}/Dropbox/Arbeit/todo.txt ${HOME}/Dropbox/Arb
 
 eval $(thefuck --alias)
 
-export WINEARCH=win32
