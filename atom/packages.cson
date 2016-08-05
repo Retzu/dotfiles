@@ -7,6 +7,7 @@ packages: [
   "file-icons"
   "linter"
   "linter-flake8"
+  "linter-jshint"
   "package-sync"
   "pretty-json"
   "react"
