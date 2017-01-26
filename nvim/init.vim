@@ -28,6 +28,9 @@ set nofoldenable  " Don't automatically fold everything when opening a file
 " /test - case insensitive
 " /Test - case sensitive
 set smartcase
+
+" Dark color scheme
+set background=dark
 " }}}
 
 " Leader stuff ------------------------------------ {{{
@@ -44,12 +47,36 @@ inoremap jk <Esc>
 
 " Plugins ----------------------------------------- {{{
 call plug#begin('~/.config/nvim/plugged/')
+Plug 'altercation/vim-colors-solarized'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'mattn/emmet-vim', { 'for': 'html' }
-Plug 'nvie/vim-flake8', { 'for': 'python' }
+Plug 'vim-syntastic/syntastic'
 call plug#end()
 " }}}
 
 " Plugins options --------------------------------- {{{
-" Call the flake8 plugin on each write of a python file
-autocmd BufWritePost *.py call Flake8()
+" Colorscheme
+colorscheme solarized
+
+" Airline fonts and theme
+let g:airline_powerline_fonts = 1
+let g:airline_theme='solarized'
+
+" Bind ctrlp.vim to Ctrl+P
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+" Syntastic recommended settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_javascript_checkers = ['eslint']
 " }}}
