@@ -38,6 +38,7 @@ let mapleader = ","
 
 nmap <silent> <leader><space> :nohlsearch<CR>  " <leader><space> = remove highlights from last search
 nmap <silent> <leader>w :set wrap!<CR>  " <leader>w = toggle line wrapping
+map <F2> :20Lexplore<CR>  " <leader>F2 = open explorer
 " }}}
 
 " Other keybindings ------------------------------- {{{
@@ -53,6 +54,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'mattn/emmet-vim', { 'for': 'html' }
 Plug 'vim-syntastic/syntastic'
+Plug 'Valloric/YouCompleteMe'
 call plug#end()
 " }}}
 
@@ -60,9 +62,10 @@ call plug#end()
 " Colorscheme
 colorscheme solarized
 
-" Airline fonts and theme
+" Airline
 let g:airline_powerline_fonts = 1
 let g:airline_theme='solarized'
+let g:airline#extensions#tabline#enabled = 1
 
 " Bind ctrlp.vim to Ctrl+P
 let g:ctrlp_map = '<c-p>'
