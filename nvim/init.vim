@@ -31,6 +31,9 @@ set smartcase
 
 " Dark color scheme
 set background=dark
+
+" Enable mouse
+set mouse=a
 " }}}
 
 " Leader stuff ------------------------------------ {{{
