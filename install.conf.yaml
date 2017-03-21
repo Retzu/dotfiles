@@ -1,0 +1,17 @@
+- defaults:
+    link:
+        relink: true
+        create: true
+
+- clean: ['~']
+
+- link:
+    ~/.ackrc:
+    ~/.zshrc:
+        force: true
+    ~/.config/nvim:
+        force: true
+        path: nvim
+
+- shell:
+    - sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
