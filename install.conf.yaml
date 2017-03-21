@@ -1,5 +1,6 @@
 - defaults:
     link:
+        force: true
         relink: true
         create: true
 
@@ -8,10 +9,11 @@
 - link:
     ~/.ackrc:
     ~/.zshrc:
-        force: true
     ~/.config/nvim:
-        force: true
         path: nvim
+    ~/.config/i3:
+        path: i3
+
 
 - shell:
     - sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
