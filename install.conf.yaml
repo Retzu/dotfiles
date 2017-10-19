@@ -1,0 +1,20 @@
+- defaults:
+    link:
+        force: true
+        relink: true
+        create: true
+
+- clean: ['~']
+
+- link:
+    ~/.ackrc:
+    ~/.zshrc:
+    ~/.config/nvim:
+        path: nvim
+    ~/.config/i3:
+        path: i3
+
+
+- shell:
+    - sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    - nvim +PlugInstall +qa
