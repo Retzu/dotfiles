@@ -90,3 +90,6 @@ alias busy="hexdump -C < /dev/urandom | grep 'ca fe' "
 
 eval $(thefuck --alias)
 
+if [ $TERMINIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi
