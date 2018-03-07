@@ -7,9 +7,9 @@ filetype on
 set nobackup
 set noswapfile
 
-" 1 tab = 4 spaces
-set shiftwidth=4
-set tabstop=4
+" 1 tab = 2 spaces
+set shiftwidth=2
+set tabstop=2
 set expandtab
 
 filetype indent on  " Choose indent for filetype
@@ -20,7 +20,7 @@ set splitright  " `:vsplit`s appear right
 
 set title  " Set the window title to filename
 
-set relativenumber  " Show line numbers relative to current line number for quicker jumping
+set number  " Show line numbers
 
 set nofoldenable  " Don't automatically fold everything when opening a file
 
@@ -53,11 +53,11 @@ inoremap jk <Esc>
 call plug#begin('~/.config/nvim/plugged/')
 Plug 'altercation/vim-colors-solarized'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'mattn/emmet-vim', { 'for': 'html' }
+Plug 'Valloric/YouCompleteMe'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'mattn/emmet-vim', { 'for': 'html' }
 Plug 'vim-syntastic/syntastic'
-Plug 'Valloric/YouCompleteMe'
 call plug#end()
 " }}}
 
