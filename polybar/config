@@ -23,10 +23,10 @@ secondary = ${xrdb:color2:#222}
 alert = ${xrdb:color3:#222}
 
 [bar/bar]
-monitor = VGA-1
+;monitor = VGA-1
 width = 100%
 height = 27
-fixed-center = false
+fixed-center = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -34,41 +34,30 @@ foreground = ${colors.foreground}
 line-size = 3
 line-color = #f00
 
-border-size = 10
+border-size = 0
 border-bottom-size = 0
 border-color = #00000000
 
 padding-left = 0
-padding-right = 2
+padding-right = 5
 
-module-margin-left = 1
-module-margin-right = 2
+module-margin-left = 3
+module-margin-right = 3
 
 font-0 = fixed:pixelsize=10;1
-;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-;font-2 = siji:pixelsize=10;1
 font-1 = Font Awesome 5 Free:style=Regular:pixelsize=10;1
 font-2 = Font Awesome 5 Free:style=Solid:pixelsize=10;1
 
 modules-left = i3
 modules-center = xwindow
-modules-right = filesystem date lock powermenu
+modules-right = filesystem date volume wireless battery lock powermenu
 
 tray-position = right
 tray-padding = 2
-;tray-transparent = true
-;tray-background = #0063ff
-
-;wm-restack = bspwm
-;wm-restack = i3
-
-;override-redirect = true
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
 
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
+
 
 [module/xwindow]
 type = internal/xwindow
@@ -170,14 +159,50 @@ menu-0-0-exec = systemctl poweroff &
 menu-0-1 = Reboot
 menu-0-1-exec = systemctl reboot &
 
+format-underline = #0a6cf5
+
 [module/lock]
 type = custom/text
 
 content = %{T3}%{T-}
 
-click-left = ~/lock.sh
-click-middle = ~/lock.sh
-click-right = ~/lock.sh
+click-left = i3lock-fancy -p -t ''
+click-middle = i3lock-fancy -p -t ''
+click-right = i3lock-fancy -p -t ''
+
+[module/wireless]
+type = internal/network
+interface = wlan0
+
+label-connected = %{T3}%{T-}
+label-disconnected = %{T3}%{T-}
+
+[module/battery]
+type = internal/battery
+
+full-at = 99
+battery = BAT0
+adapter = ACAD
+
+label-discharging = %{T3}%{T-} %percentage%%
+
+format-charging = <animation-charging> <label-charging>
+
+animation-charging-0 = %{T3}%{T-}
+animation-charging-1 = %{T3}%{T-}
+animation-charging-2 = %{T3}%{T-}
+animation-charging-3 = %{T3}%{T-}
+
+[module/volume]
+type = internal/volume
+
+master-soundcard = hw:0
+speaker-soundcard = hw:0
+headphone-soundcard = hw:0
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
 
 [settings]
 screenchange-reload = true
@@ -185,9 +210,5 @@ screenchange-reload = true
 ;compositing-background = screen
 ;compositing-foreground = source
 ;compositing-border = over
-
-[global/wm]
-margin-top = 5
-margin-bottom = 5
 
 ; vim:ft=dosini
