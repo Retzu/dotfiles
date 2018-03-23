@@ -52,8 +52,6 @@ ZSH_THEME="garyblessington"
 plugins=(git sudo rsync)
 
 # User configuration
-
-  export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -89,7 +87,9 @@ alias serve="python3 -m http.server"
 alias vi="nvim"
 alias vim="nvim"
 alias busy="hexdump -C < /dev/urandom | grep 'ca fe' "
-alias todo="/usr/bin/nvim -O ${HOME}/Dropbox/Arbeit/todo.txt ${HOME}/Dropbox/Arbeit/done.txt"
 
 eval $(thefuck --alias)
 
+if [ $TERMINIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi
