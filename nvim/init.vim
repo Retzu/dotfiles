@@ -62,6 +62,7 @@ call plug#begin('~/.config/nvim/plugged/')
 Plug 'altercation/vim-colors-solarized'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mattn/emmet-vim', { 'for': 'html' }
+Plug 'tpope/vim-commentary'
 Plug 'Valloric/YouCompleteMe'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
