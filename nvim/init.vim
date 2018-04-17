@@ -59,8 +59,8 @@ inoremap jk <Esc>
 
 " Plugins ----------------------------------------- {{{
 call plug#begin('~/.config/nvim/plugged/')
-Plug 'altercation/vim-colors-solarized'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'dylanaraps/wal.vim'
 Plug 'mattn/emmet-vim', { 'for': 'html' }
 Plug 'tpope/vim-commentary'
 Plug 'Valloric/YouCompleteMe'
@@ -72,7 +72,7 @@ call plug#end()
 
 " Plugins options --------------------------------- {{{
 " Colorscheme
-colorscheme solarized
+colorscheme wal
 
 " Airline
 let g:airline_powerline_fonts = 1
