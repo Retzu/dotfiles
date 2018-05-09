@@ -64,8 +64,8 @@ Plug 'dylanaraps/wal.vim'
 Plug 'mattn/emmet-vim', { 'for': 'html' }
 Plug 'tpope/vim-commentary'
 Plug 'Valloric/YouCompleteMe'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
+Plug 'mgee/lightline-bufferline'
 Plug 'vim-syntastic/syntastic'
 call plug#end()
 " }}}
@@ -74,10 +74,15 @@ call plug#end()
 " Colorscheme
 colorscheme wal
 
-" Airline
-let g:airline_powerline_fonts = 1
-let g:airline_theme='solarized'
-let g:airline#extensions#tabline#enabled = 1
+" lightline.vim
+set noshowmode
+set showtabline=2
+let g:lightline = { 'colorscheme': 'solarized' }
+let g:lightline.separator = { 'left': '', 'right': '' }
+let g:lightline.subseparator = { 'left': '', 'right': '' }
+let g:lightline.tabline = { 'left': [['buffers']], 'right': [['close']] }
+let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
+let g:lightline.component_type = {'buffers': 'tabsel'}
 
 " Bind ctrlp.vim to Ctrl+P
 let g:ctrlp_map = '<c-p>'
