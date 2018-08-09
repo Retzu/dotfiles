@@ -1,7 +1,3 @@
---type-add=js=.js.twig,.coffee,.js
---type-add=html=.html.twig,.html
---type-add=css=.css,.sass,.scss,.less,.css.twig,.sass.twig,.scss.twig,.less.twig
---type-add=twig=.twig
 --color
 --ignore-dir=.idea
 --smart-case
