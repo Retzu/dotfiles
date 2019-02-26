@@ -93,3 +93,4 @@ eval $(thefuck --alias)
 if [ $TERMINIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
 fi
+export PATH="/home/chris/bin/Sencha/Cmd:$PATH"

@@ -29,9 +29,6 @@ set nofoldenable  " Don't automatically fold everything when opening a file
 " /Test - case sensitive
 set smartcase
 
-" Dark color scheme
-set background=dark
-
 " Enable mouse
 set mouse=a
 " }}}
@@ -49,7 +46,7 @@ let mapleader = ","
 
 nmap <silent> <leader><space> :nohlsearch<CR>  " <leader><space> = remove highlights from last search
 nmap <silent> <leader>w :set wrap!<CR>  " <leader>w = toggle line wrapping
-map <F2> :20Lexplore<CR>  " <leader>F2 = open explorer
+map <F2> :20Lexplore<CR>  " F2 = open explorer
 " }}}
 
 " Other keybindings ------------------------------- {{{
@@ -61,11 +58,11 @@ inoremap jk <Esc>
 call plug#begin('~/.config/nvim/plugged/')
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dylanaraps/wal.vim'
+Plug 'itchyny/lightline.vim'
 Plug 'mattn/emmet-vim', { 'for': 'html' }
+Plug 'mgee/lightline-bufferline'
 Plug 'tpope/vim-commentary'
 Plug 'Valloric/YouCompleteMe'
-Plug 'itchyny/lightline.vim'
-Plug 'mgee/lightline-bufferline'
 Plug 'vim-syntastic/syntastic'
 call plug#end()
 " }}}
@@ -77,7 +74,7 @@ colorscheme wal
 " lightline.vim
 set noshowmode
 set showtabline=2
-let g:lightline = { 'colorscheme': 'solarized' }
+let g:lightline = { 'colorscheme': 'wal' }
 let g:lightline.separator = { 'left': '', 'right': '' }
 let g:lightline.subseparator = { 'left': '', 'right': '' }
 let g:lightline.tabline = { 'left': [['buffers']], 'right': [['close']] }
