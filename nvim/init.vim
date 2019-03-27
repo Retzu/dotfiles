@@ -59,6 +59,7 @@ call plug#begin('~/.config/nvim/plugged/')
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dylanaraps/wal.vim'
 Plug 'itchyny/lightline.vim'
+Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim', { 'for': 'html' }
 Plug 'mgee/lightline-bufferline'
 Plug 'tpope/vim-commentary'
