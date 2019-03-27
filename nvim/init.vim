@@ -62,9 +62,9 @@ Plug 'itchyny/lightline.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim', { 'for': 'html' }
 Plug 'mgee/lightline-bufferline'
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 Plug 'tpope/vim-commentary'
-Plug 'Valloric/YouCompleteMe'
-Plug 'vim-syntastic/syntastic'
+Plug 'w0rp/ale'
 call plug#end()
 " }}}
 
@@ -86,15 +86,7 @@ let g:lightline.component_type = {'buffers': 'tabsel'}
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
-" Syntastic recommended settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-let g:syntastic_javascript_checkers = ['eslint']
+" ALE
+let g:ale_linters = { 'python': ['flake8', 'pyls'] }
+let g:ale_python_pyls_use_global = 1
 " }}}
