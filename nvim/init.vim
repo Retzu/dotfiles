@@ -65,6 +65,7 @@ Plug 'maximbaz/lightline-ale'
 Plug 'mgee/lightline-bufferline'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 Plug 'tpope/vim-commentary'
+Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'w0rp/ale'
 call plug#end()
 " }}}
