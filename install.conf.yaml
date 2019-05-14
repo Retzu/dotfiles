@@ -8,21 +8,5 @@
 
 - link:
     ~/.ackrc:
-    ~/.zshrc:
     ~/.config/nvim:
         path: nvim
-    ~/.config/i3:
-        path: i3
-    ~/.Xresources:
-    ~/.config/compton.conf: compton.conf
-    ~/.config/ranger:
-        path: ranger
-    ~/.config/polybar:
-        path: polybar
-    ~/.config/rofi:
-        path: rofi
-
-
-- shell:
-    - sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-    - nvim +PlugInstall +qa
