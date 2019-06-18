@@ -46,7 +46,7 @@ let mapleader = ","
 
 nmap <silent> <leader><space> :nohlsearch<CR>  " <leader><space> = remove highlights from last search
 nmap <silent> <leader>w :set wrap!<CR>  " <leader>w = toggle line wrapping
-map <F2> :20Lexplore<CR>  " F2 = open explorer
+map <F2> :NERDTreeToggle<CR>  " F2 = open explorer
 " }}}
 
 " Other keybindings ------------------------------- {{{
@@ -63,7 +63,9 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim', { 'for': 'html' }
 Plug 'maximbaz/lightline-ale'
 Plug 'mgee/lightline-bufferline'
+Plug 'mhinz/vim-nginx'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'w0rp/ale'
@@ -122,5 +124,14 @@ endfunction
 " Use <cr> for confirm completion, `<C-g>u` means break undo chain at current position.
 " Coc only does snippet and additional edit on confirm.
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" NERDTree
+" Open NERDTree on start-up
+autocmd vimenter * NERDTree
+" Open NERDTree on start-up if no file was specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" Close nvim if NERDTree is the only window left open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " }}}
