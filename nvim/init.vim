@@ -52,6 +52,7 @@ map <F2> :NERDTreeToggle<CR>  " F2 = open explorer
 " Other keybindings ------------------------------- {{{
 inoremap kj <Esc>
 inoremap jk <Esc>
+nnoremap n nzz
 " }}}
 
 " Plugins ----------------------------------------- {{{
@@ -69,12 +70,13 @@ Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'w0rp/ale'
+Plug 'arcticicestudio/nord-vim'
 call plug#end()
 " }}}
 
 " Plugins options --------------------------------- {{{
 " Colorscheme
-colorscheme wal
+colorscheme nord
 
 " lightline.vim
 set noshowmode
